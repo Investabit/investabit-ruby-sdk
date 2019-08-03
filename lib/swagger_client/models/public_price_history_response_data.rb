@@ -13,20 +13,20 @@ Swagger Codegen version: 2.4.8-SNAPSHOT
 require 'date'
 
 module SwaggerClient
-  class PublicCurrentResponseData
-    attr_accessor :current
+  class PublicPriceHistoryResponseData
+    attr_accessor :price_history
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'current' => :'current'
+        :'price_history' => :'price_history'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'current' => :'Array<PublicCurrentResponseDataCurrent>'
+        :'price_history' => :'Array<PublicPriceHistoryResponseDataPriceHistory>'
       }
     end
 
@@ -38,9 +38,9 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'current')
-        if (value = attributes[:'current']).is_a?(Array)
-          self.current = value
+      if attributes.has_key?(:'price_history')
+        if (value = attributes[:'price_history']).is_a?(Array)
+          self.price_history = value
         end
       end
     end
@@ -49,8 +49,8 @@ module SwaggerClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @current.nil?
-        invalid_properties.push('invalid value for "current", current cannot be nil.')
+      if @price_history.nil?
+        invalid_properties.push('invalid value for "price_history", price_history cannot be nil.')
       end
 
       invalid_properties
@@ -59,7 +59,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @current.nil?
+      return false if @price_history.nil?
       true
     end
 
@@ -68,7 +68,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          current == o.current
+          price_history == o.price_history
     end
 
     # @see the `==` method
@@ -80,7 +80,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [current].hash
+      [price_history].hash
     end
 
     # Builds the object from hash

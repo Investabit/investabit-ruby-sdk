@@ -13,20 +13,28 @@ Swagger Codegen version: 2.4.8-SNAPSHOT
 require 'date'
 
 module SwaggerClient
-  class PublicCurrentResponseData
-    attr_accessor :current
+  class PublicPriceHistoryResponseDataPriceHistory
+    attr_accessor :symbol
+
+    attr_accessor :name
+
+    attr_accessor :history
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'current' => :'current'
+        :'symbol' => :'symbol',
+        :'name' => :'name',
+        :'history' => :'history'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'current' => :'Array<PublicCurrentResponseDataCurrent>'
+        :'symbol' => :'String',
+        :'name' => :'String',
+        :'history' => :'Array<PublicPriceHistoryResponseDataHistory>'
       }
     end
 
@@ -38,9 +46,17 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'current')
-        if (value = attributes[:'current']).is_a?(Array)
-          self.current = value
+      if attributes.has_key?(:'symbol')
+        self.symbol = attributes[:'symbol']
+      end
+
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
+      end
+
+      if attributes.has_key?(:'history')
+        if (value = attributes[:'history']).is_a?(Array)
+          self.history = value
         end
       end
     end
@@ -49,8 +65,16 @@ module SwaggerClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @current.nil?
-        invalid_properties.push('invalid value for "current", current cannot be nil.')
+      if @symbol.nil?
+        invalid_properties.push('invalid value for "symbol", symbol cannot be nil.')
+      end
+
+      if @name.nil?
+        invalid_properties.push('invalid value for "name", name cannot be nil.')
+      end
+
+      if @history.nil?
+        invalid_properties.push('invalid value for "history", history cannot be nil.')
       end
 
       invalid_properties
@@ -59,7 +83,9 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @current.nil?
+      return false if @symbol.nil?
+      return false if @name.nil?
+      return false if @history.nil?
       true
     end
 
@@ -68,7 +94,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          current == o.current
+          symbol == o.symbol &&
+          name == o.name &&
+          history == o.history
     end
 
     # @see the `==` method
@@ -80,7 +108,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [current].hash
+      [symbol, name, history].hash
     end
 
     # Builds the object from hash

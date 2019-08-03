@@ -56,7 +56,7 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::PublicApi.new
 
-symbol = '\"btc\"' # String | The cryptocurrency symbol, default is btc.
+symbol = '\"btc\"' # String | The cryptocurrency symbol, provide `all` to get every symbol.
 
 
 begin
@@ -76,7 +76,8 @@ All URIs are relative to *https://api.investabit.com*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwaggerClient::PublicApi* | [**v1_public_current_symbol_get**](docs/PublicApi.md#v1_public_current_symbol_get) | **GET** /v1/public/current/{symbol} | Current
-*SwaggerClient::PublicApi* | [**v1_public_price_history_symbol_get**](docs/PublicApi.md#v1_public_price_history_symbol_get) | **GET** /v1/public/price-history/{symbol} | Price History
+*SwaggerClient::PublicApi* | [**v1_public_price_change_symbol_get**](docs/PublicApi.md#v1_public_price_change_symbol_get) | **GET** /v1/public/price-change/{symbol} | Price Change
+*SwaggerClient::PublicApi* | [**v1_public_price_history_symbol_period_interval_get**](docs/PublicApi.md#v1_public_price_history_symbol_period_interval_get) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 *SwaggerClient::PublicApi* | [**v1_public_symbols_get**](docs/PublicApi.md#v1_public_symbols_get) | **GET** /v1/public/symbols | Symbols
 *SwaggerClient::PublicApi* | [**v1_public_trend_symbol_get**](docs/PublicApi.md#v1_public_trend_symbol_get) | **GET** /v1/public/trend/{symbol} | Trend
 
@@ -85,12 +86,18 @@ Class | Method | HTTP request | Description
 
  - [SwaggerClient::CurrentRoute](docs/CurrentRoute.md)
  - [SwaggerClient::DefaultResponse](docs/DefaultResponse.md)
+ - [SwaggerClient::PriceChangeRoute](docs/PriceChangeRoute.md)
  - [SwaggerClient::PriceHistoryRoute](docs/PriceHistoryRoute.md)
  - [SwaggerClient::PublicCurrentResponse](docs/PublicCurrentResponse.md)
  - [SwaggerClient::PublicCurrentResponseData](docs/PublicCurrentResponseData.md)
- - [SwaggerClient::PublicPriceResponse](docs/PublicPriceResponse.md)
- - [SwaggerClient::PublicPriceResponseData](docs/PublicPriceResponseData.md)
- - [SwaggerClient::PublicPriceResponseDataHistory](docs/PublicPriceResponseDataHistory.md)
+ - [SwaggerClient::PublicCurrentResponseDataCurrent](docs/PublicCurrentResponseDataCurrent.md)
+ - [SwaggerClient::PublicPriceChangeResponse](docs/PublicPriceChangeResponse.md)
+ - [SwaggerClient::PublicPriceChangeResponseData](docs/PublicPriceChangeResponseData.md)
+ - [SwaggerClient::PublicPriceChangeResponseDataPriceChange](docs/PublicPriceChangeResponseDataPriceChange.md)
+ - [SwaggerClient::PublicPriceHistoryResponse](docs/PublicPriceHistoryResponse.md)
+ - [SwaggerClient::PublicPriceHistoryResponseData](docs/PublicPriceHistoryResponseData.md)
+ - [SwaggerClient::PublicPriceHistoryResponseDataHistory](docs/PublicPriceHistoryResponseDataHistory.md)
+ - [SwaggerClient::PublicPriceHistoryResponseDataPriceHistory](docs/PublicPriceHistoryResponseDataPriceHistory.md)
  - [SwaggerClient::PublicSymbolsResponse](docs/PublicSymbolsResponse.md)
  - [SwaggerClient::PublicSymbolsResponseData](docs/PublicSymbolsResponseData.md)
  - [SwaggerClient::PublicSymbolsResponseDataSymbols](docs/PublicSymbolsResponseDataSymbols.md)
