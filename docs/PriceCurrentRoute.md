@@ -1,4 +1,4 @@
-# SwaggerClient::CurrentRoute
+# SwaggerClient::PriceCurrentRoute
 
 ## Properties
 Name | Type | Description | Notes

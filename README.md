@@ -56,15 +56,15 @@ require 'swagger_client'
 
 api_instance = SwaggerClient::PublicApi.new
 
-symbol = '\"btc\"' # String | The cryptocurrency symbol, provide `all` to get every symbol.
+symbol = 'btc' # String | The cryptocurrency symbol.
 
 
 begin
-  #Current
-  result = api_instance.v1_public_current_symbol_get(symbol)
+  #Price Change
+  result = api_instance.v1_public_price_change_symbol_get(symbol)
   p result
 rescue SwaggerClient::ApiError => e
-  puts "Exception when calling PublicApi->v1_public_current_symbol_get: #{e}"
+  puts "Exception when calling PublicApi->v1_public_price_change_symbol_get: #{e}"
 end
 
 ```
@@ -75,8 +75,8 @@ All URIs are relative to *https://api.investabit.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SwaggerClient::PublicApi* | [**v1_public_current_symbol_get**](docs/PublicApi.md#v1_public_current_symbol_get) | **GET** /v1/public/current/{symbol} | Current
 *SwaggerClient::PublicApi* | [**v1_public_price_change_symbol_get**](docs/PublicApi.md#v1_public_price_change_symbol_get) | **GET** /v1/public/price-change/{symbol} | Price Change
+*SwaggerClient::PublicApi* | [**v1_public_price_current_symbol_get**](docs/PublicApi.md#v1_public_price_current_symbol_get) | **GET** /v1/public/price-current/{symbol} | Price Current
 *SwaggerClient::PublicApi* | [**v1_public_price_history_symbol_period_interval_get**](docs/PublicApi.md#v1_public_price_history_symbol_period_interval_get) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 *SwaggerClient::PublicApi* | [**v1_public_symbols_get**](docs/PublicApi.md#v1_public_symbols_get) | **GET** /v1/public/symbols | Symbols
 *SwaggerClient::PublicApi* | [**v1_public_trend_symbol_get**](docs/PublicApi.md#v1_public_trend_symbol_get) | **GET** /v1/public/trend/{symbol} | Trend
@@ -84,16 +84,16 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [SwaggerClient::CurrentRoute](docs/CurrentRoute.md)
  - [SwaggerClient::DefaultResponse](docs/DefaultResponse.md)
  - [SwaggerClient::PriceChangeRoute](docs/PriceChangeRoute.md)
+ - [SwaggerClient::PriceCurrentRoute](docs/PriceCurrentRoute.md)
  - [SwaggerClient::PriceHistoryRoute](docs/PriceHistoryRoute.md)
- - [SwaggerClient::PublicCurrentResponse](docs/PublicCurrentResponse.md)
- - [SwaggerClient::PublicCurrentResponseData](docs/PublicCurrentResponseData.md)
- - [SwaggerClient::PublicCurrentResponseDataCurrent](docs/PublicCurrentResponseDataCurrent.md)
  - [SwaggerClient::PublicPriceChangeResponse](docs/PublicPriceChangeResponse.md)
  - [SwaggerClient::PublicPriceChangeResponseData](docs/PublicPriceChangeResponseData.md)
  - [SwaggerClient::PublicPriceChangeResponseDataPriceChange](docs/PublicPriceChangeResponseDataPriceChange.md)
+ - [SwaggerClient::PublicPriceCurrentResponse](docs/PublicPriceCurrentResponse.md)
+ - [SwaggerClient::PublicPriceCurrentResponseData](docs/PublicPriceCurrentResponseData.md)
+ - [SwaggerClient::PublicPriceCurrentResponseDataCurrent](docs/PublicPriceCurrentResponseDataCurrent.md)
  - [SwaggerClient::PublicPriceHistoryResponse](docs/PublicPriceHistoryResponse.md)
  - [SwaggerClient::PublicPriceHistoryResponseData](docs/PublicPriceHistoryResponseData.md)
  - [SwaggerClient::PublicPriceHistoryResponseDataHistory](docs/PublicPriceHistoryResponseDataHistory.md)

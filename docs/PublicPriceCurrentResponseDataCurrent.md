@@ -1,4 +1,4 @@
-# SwaggerClient::PublicCurrentResponseDataCurrent
+# SwaggerClient::PublicPriceCurrentResponseDataCurrent
 
 ## Properties
 Name | Type | Description | Notes

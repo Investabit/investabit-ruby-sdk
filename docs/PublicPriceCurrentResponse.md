@@ -1,4 +1,4 @@
-# SwaggerClient::PublicCurrentResponse
+# SwaggerClient::PublicPriceCurrentResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **success** | **BOOLEAN** |  | 
 **code** | **Integer** |  | 
 **status** | **String** |  | 
-**data** | [**PublicCurrentResponseData**](PublicCurrentResponseData.md) |  | 
+**data** | [**PublicPriceCurrentResponseData**](PublicPriceCurrentResponseData.md) |  | 
 **errors** | **Array&lt;Object&gt;** |  | [optional] 
 
 
