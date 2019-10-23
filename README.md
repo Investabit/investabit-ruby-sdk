@@ -80,6 +80,7 @@ Class | Method | HTTP request | Description
 *SwaggerClient::PublicApi* | [**v1_public_price_history_symbol_period_interval_get**](docs/PublicApi.md#v1_public_price_history_symbol_period_interval_get) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 *SwaggerClient::PublicApi* | [**v1_public_symbols_get**](docs/PublicApi.md#v1_public_symbols_get) | **GET** /v1/public/symbols | Symbols
 *SwaggerClient::PublicApi* | [**v1_public_trend_symbol_get**](docs/PublicApi.md#v1_public_trend_symbol_get) | **GET** /v1/public/trend/{symbol} | Trend
+*SwaggerClient::PublicApi* | [**v1_public_waiting_list_post**](docs/PublicApi.md#v1_public_waiting_list_post) | **POST** /v1/public/waiting-list | Waiting List
 
 
 ## Documentation for Models
@@ -104,8 +105,10 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::PublicTrendResponse](docs/PublicTrendResponse.md)
  - [SwaggerClient::PublicTrendResponseData](docs/PublicTrendResponseData.md)
  - [SwaggerClient::PublicTrendResponseDataTrend](docs/PublicTrendResponseDataTrend.md)
+ - [SwaggerClient::PublicWaitingListRequest](docs/PublicWaitingListRequest.md)
  - [SwaggerClient::SymbolsRoute](docs/SymbolsRoute.md)
  - [SwaggerClient::TrendRoute](docs/TrendRoute.md)
+ - [SwaggerClient::WaitingListRoute](docs/WaitingListRoute.md)
 
 
 ## Documentation for Authorization

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**v1_public_price_history_symbol_period_interval_get**](PublicApi.md#v1_public_price_history_symbol_period_interval_get) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 [**v1_public_symbols_get**](PublicApi.md#v1_public_symbols_get) | **GET** /v1/public/symbols | Symbols
 [**v1_public_trend_symbol_get**](PublicApi.md#v1_public_trend_symbol_get) | **GET** /v1/public/trend/{symbol} | Trend
+[**v1_public_waiting_list_post**](PublicApi.md#v1_public_waiting_list_post) | **POST** /v1/public/waiting-list | Waiting List
 
 
 # **v1_public_price_change_symbol_get**
@@ -234,6 +235,54 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PublicTrendResponse**](PublicTrendResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **v1_public_waiting_list_post**
+> DefaultResponse v1_public_waiting_list_post(opts)
+
+Waiting List
+
+Subscribe a user to the waiting list, `name` is not required.
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+
+api_instance = SwaggerClient::PublicApi.new
+
+opts = { 
+  body: SwaggerClient::PublicWaitingListRequest.new # PublicWaitingListRequest | 
+}
+
+begin
+  #Waiting List
+  result = api_instance.v1_public_waiting_list_post(opts)
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling PublicApi->v1_public_waiting_list_post: #{e}"
+end
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PublicWaitingListRequest**](PublicWaitingListRequest.md)|  | [optional] 
+
+### Return type
+
+[**DefaultResponse**](DefaultResponse.md)
 
 ### Authorization
 

@@ -13,36 +13,32 @@ Swagger Codegen version: 2.4.10-SNAPSHOT
 require 'date'
 
 module SwaggerClient
-  class PublicTrendResponse
-    attr_accessor :success
+  class PublicWaitingListRequest
+    attr_accessor :name
 
-    attr_accessor :code
+    attr_accessor :email
 
-    attr_accessor :status
+    attr_accessor :service
 
-    attr_accessor :data
-
-    attr_accessor :errors
+    attr_accessor :list_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'success' => :'success',
-        :'code' => :'code',
-        :'status' => :'status',
-        :'data' => :'data',
-        :'errors' => :'errors'
+        :'name' => :'name',
+        :'email' => :'email',
+        :'service' => :'service',
+        :'list_id' => :'list_id'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'success' => :'BOOLEAN',
-        :'code' => :'Integer',
-        :'status' => :'String',
-        :'data' => :'PublicTrendResponseData',
-        :'errors' => :'Array<Object>'
+        :'name' => :'String',
+        :'email' => :'String',
+        :'service' => :'String',
+        :'list_id' => :'String'
       }
     end
 
@@ -54,26 +50,20 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'success')
-        self.success = attributes[:'success']
+      if attributes.has_key?(:'name')
+        self.name = attributes[:'name']
       end
 
-      if attributes.has_key?(:'code')
-        self.code = attributes[:'code']
+      if attributes.has_key?(:'email')
+        self.email = attributes[:'email']
       end
 
-      if attributes.has_key?(:'status')
-        self.status = attributes[:'status']
+      if attributes.has_key?(:'service')
+        self.service = attributes[:'service']
       end
 
-      if attributes.has_key?(:'data')
-        self.data = attributes[:'data']
-      end
-
-      if attributes.has_key?(:'errors')
-        if (value = attributes[:'errors']).is_a?(Array)
-          self.errors = value
-        end
+      if attributes.has_key?(:'list_id')
+        self.list_id = attributes[:'list_id']
       end
     end
 
@@ -81,20 +71,20 @@ module SwaggerClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @success.nil?
-        invalid_properties.push('invalid value for "success", success cannot be nil.')
+      if @email.nil?
+        invalid_properties.push('invalid value for "email", email cannot be nil.')
       end
 
-      if @code.nil?
-        invalid_properties.push('invalid value for "code", code cannot be nil.')
+      if @email !~ Regexp.new(/^[^@]+@[^@]+$/)
+        invalid_properties.push('invalid value for "email", must conform to the pattern /^[^@]+@[^@]+$/.')
       end
 
-      if @status.nil?
-        invalid_properties.push('invalid value for "status", status cannot be nil.')
+      if @service.nil?
+        invalid_properties.push('invalid value for "service", service cannot be nil.')
       end
 
-      if @data.nil?
-        invalid_properties.push('invalid value for "data", data cannot be nil.')
+      if @list_id.nil?
+        invalid_properties.push('invalid value for "list_id", list_id cannot be nil.')
       end
 
       invalid_properties
@@ -103,11 +93,25 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @success.nil?
-      return false if @code.nil?
-      return false if @status.nil?
-      return false if @data.nil?
+      return false if @email.nil?
+      return false if @email !~ Regexp.new(/^[^@]+@[^@]+$/)
+      return false if @service.nil?
+      return false if @list_id.nil?
       true
+    end
+
+    # Custom attribute writer method with validation
+    # @param [Object] email Value to be assigned
+    def email=(email)
+      if email.nil?
+        fail ArgumentError, 'email cannot be nil'
+      end
+
+      if email !~ Regexp.new(/^[^@]+@[^@]+$/)
+        fail ArgumentError, 'invalid value for "email", must conform to the pattern /^[^@]+@[^@]+$/.'
+      end
+
+      @email = email
     end
 
     # Checks equality by comparing each attribute.
@@ -115,11 +119,10 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          success == o.success &&
-          code == o.code &&
-          status == o.status &&
-          data == o.data &&
-          errors == o.errors
+          name == o.name &&
+          email == o.email &&
+          service == o.service &&
+          list_id == o.list_id
     end
 
     # @see the `==` method
@@ -131,7 +134,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [success, code, status, data, errors].hash
+      [name, email, service, list_id].hash
     end
 
     # Builds the object from hash
