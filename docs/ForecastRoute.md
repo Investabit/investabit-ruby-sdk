@@ -1,4 +1,4 @@
-# SwaggerClient::WaitingListRoute
+# SwaggerClient::ForecastRoute
 
 ## Properties
 Name | Type | Description | Notes
