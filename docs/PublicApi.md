@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**v1_public_price_change_symbol_get**](PublicApi.md#v1_public_price_change_symbol_get) | **GET** /v1/public/price-change/{symbol} | Price Change
 [**v1_public_price_current_symbol_get**](PublicApi.md#v1_public_price_current_symbol_get) | **GET** /v1/public/price-current/{symbol} | Price Current
 [**v1_public_price_history_symbol_period_interval_get**](PublicApi.md#v1_public_price_history_symbol_period_interval_get) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
+[**v1_public_summary_get**](PublicApi.md#v1_public_summary_get) | **GET** /v1/public/summary | Summary
 [**v1_public_symbols_get**](PublicApi.md#v1_public_symbols_get) | **GET** /v1/public/symbols | Symbols
 [**v1_public_trend_symbol_get**](PublicApi.md#v1_public_trend_symbol_get) | **GET** /v1/public/trend/{symbol} | Trend
 
@@ -146,6 +147,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PublicPriceHistoryResponse**](PublicPriceHistoryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+
+# **v1_public_summary_get**
+> PublicSummaryResponse v1_public_summary_get
+
+Summary
+
+
+
+### Example
+```ruby
+# load the gem
+require 'swagger_client'
+
+api_instance = SwaggerClient::PublicApi.new
+
+begin
+  #Summary
+  result = api_instance.v1_public_summary_get
+  p result
+rescue SwaggerClient::ApiError => e
+  puts "Exception when calling PublicApi->v1_public_summary_get: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PublicSummaryResponse**](PublicSummaryResponse.md)
 
 ### Authorization
 

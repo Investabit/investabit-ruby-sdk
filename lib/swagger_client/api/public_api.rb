@@ -187,6 +187,52 @@ module SwaggerClient
       end
       return data, status_code, headers
     end
+    # Summary
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [PublicSummaryResponse]
+    def v1_public_summary_get(opts = {})
+      data, _status_code, _headers = v1_public_summary_get_with_http_info(opts)
+      data
+    end
+
+    # Summary
+    # 
+    # @param [Hash] opts the optional parameters
+    # @return [Array<(PublicSummaryResponse, Fixnum, Hash)>] PublicSummaryResponse data, response status code and response headers
+    def v1_public_summary_get_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: PublicApi.v1_public_summary_get ...'
+      end
+      # resource path
+      local_var_path = '/v1/public/summary'
+
+      # query parameters
+      query_params = {}
+
+      # header parameters
+      header_params = {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['application/json'])
+
+      # form parameters
+      form_params = {}
+
+      # http body (model)
+      post_body = nil
+      auth_names = []
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path,
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => 'PublicSummaryResponse')
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: PublicApi#v1_public_summary_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
     # Symbols
     # 
     # @param [Hash] opts the optional parameters

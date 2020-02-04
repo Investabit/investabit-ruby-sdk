@@ -96,6 +96,7 @@ Class | Method | HTTP request | Description
 *SwaggerClient::PublicApi* | [**v1_public_price_change_symbol_get**](docs/PublicApi.md#v1_public_price_change_symbol_get) | **GET** /v1/public/price-change/{symbol} | Price Change
 *SwaggerClient::PublicApi* | [**v1_public_price_current_symbol_get**](docs/PublicApi.md#v1_public_price_current_symbol_get) | **GET** /v1/public/price-current/{symbol} | Price Current
 *SwaggerClient::PublicApi* | [**v1_public_price_history_symbol_period_interval_get**](docs/PublicApi.md#v1_public_price_history_symbol_period_interval_get) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
+*SwaggerClient::PublicApi* | [**v1_public_summary_get**](docs/PublicApi.md#v1_public_summary_get) | **GET** /v1/public/summary | Summary
 *SwaggerClient::PublicApi* | [**v1_public_symbols_get**](docs/PublicApi.md#v1_public_symbols_get) | **GET** /v1/public/symbols | Symbols
 *SwaggerClient::PublicApi* | [**v1_public_trend_symbol_get**](docs/PublicApi.md#v1_public_trend_symbol_get) | **GET** /v1/public/trend/{symbol} | Trend
 
@@ -126,12 +127,16 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::PublicPriceHistoryResponseData](docs/PublicPriceHistoryResponseData.md)
  - [SwaggerClient::PublicPriceHistoryResponseDataHistory](docs/PublicPriceHistoryResponseDataHistory.md)
  - [SwaggerClient::PublicPriceHistoryResponseDataPriceHistory](docs/PublicPriceHistoryResponseDataPriceHistory.md)
+ - [SwaggerClient::PublicSummaryResponse](docs/PublicSummaryResponse.md)
+ - [SwaggerClient::PublicSummaryResponseColor](docs/PublicSummaryResponseColor.md)
+ - [SwaggerClient::PublicSummaryResponseData](docs/PublicSummaryResponseData.md)
  - [SwaggerClient::PublicSymbolsResponse](docs/PublicSymbolsResponse.md)
  - [SwaggerClient::PublicSymbolsResponseData](docs/PublicSymbolsResponseData.md)
  - [SwaggerClient::PublicSymbolsResponseDataSymbols](docs/PublicSymbolsResponseDataSymbols.md)
  - [SwaggerClient::PublicTrendResponse](docs/PublicTrendResponse.md)
  - [SwaggerClient::PublicTrendResponseData](docs/PublicTrendResponseData.md)
  - [SwaggerClient::PublicTrendResponseDataTrend](docs/PublicTrendResponseDataTrend.md)
+ - [SwaggerClient::SummaryRoute](docs/SummaryRoute.md)
  - [SwaggerClient::SymbolsRoute](docs/SymbolsRoute.md)
  - [SwaggerClient::TrendRoute](docs/TrendRoute.md)
  - [SwaggerClient::TrendTabluarRoute](docs/TrendTabluarRoute.md)
