@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwaggerClient::PrivateApi* | [**v1_private_accuracy_symbol_interval_period_get**](docs/PrivateApi.md#v1_private_accuracy_symbol_interval_period_get) | **GET** /v1/private/accuracy/{symbol}/{interval}/{period} | Accuracy
 *SwaggerClient::PrivateApi* | [**v1_private_forecast_symbol_interval_get**](docs/PrivateApi.md#v1_private_forecast_symbol_interval_get) | **GET** /v1/private/forecast/{symbol}/{interval} | Forecast
+*SwaggerClient::PrivateApi* | [**v1_private_forecast_time_symbol_interval_period_get**](docs/PrivateApi.md#v1_private_forecast_time_symbol_interval_period_get) | **GET** /v1/private/forecast-time/{symbol}/{interval}/{period} | Forecast Time
 *SwaggerClient::PrivateApi* | [**v1_private_trend_symbol_get**](docs/PrivateApi.md#v1_private_trend_symbol_get) | **GET** /v1/private/trend/{symbol} | Trend
 *SwaggerClient::PrivateApi* | [**v1_private_trend_tabular_get**](docs/PrivateApi.md#v1_private_trend_tabular_get) | **GET** /v1/private/trend-tabular | Trend Tabular
 *SwaggerClient::PublicApi* | [**v1_public_price_change_symbol_get**](docs/PublicApi.md#v1_public_price_change_symbol_get) | **GET** /v1/public/price-change/{symbol} | Price Change
@@ -106,6 +107,7 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::AccuracyRoute](docs/AccuracyRoute.md)
  - [SwaggerClient::DefaultResponse](docs/DefaultResponse.md)
  - [SwaggerClient::ForecastRoute](docs/ForecastRoute.md)
+ - [SwaggerClient::ForecastTimeRoute](docs/ForecastTimeRoute.md)
  - [SwaggerClient::PriceChangeRoute](docs/PriceChangeRoute.md)
  - [SwaggerClient::PriceCurrentRoute](docs/PriceCurrentRoute.md)
  - [SwaggerClient::PriceHistoryRoute](docs/PriceHistoryRoute.md)
@@ -114,6 +116,8 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::PrivateForecastResponse](docs/PrivateForecastResponse.md)
  - [SwaggerClient::PrivateForecastResponseData](docs/PrivateForecastResponseData.md)
  - [SwaggerClient::PrivateForecastResponseDataForecast](docs/PrivateForecastResponseDataForecast.md)
+ - [SwaggerClient::PrivateForecastTimeResponse](docs/PrivateForecastTimeResponse.md)
+ - [SwaggerClient::PrivateForecastTimeResponseData](docs/PrivateForecastTimeResponseData.md)
  - [SwaggerClient::PrivateTrendTabularResponse](docs/PrivateTrendTabularResponse.md)
  - [SwaggerClient::PrivateTrendTabularResponseData](docs/PrivateTrendTabularResponseData.md)
  - [SwaggerClient::PrivateTrendTabularResponseDataTrendTabular](docs/PrivateTrendTabularResponseDataTrendTabular.md)

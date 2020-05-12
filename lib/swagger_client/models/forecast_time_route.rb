@@ -13,20 +13,16 @@ Swagger Codegen version: 2.4.14-SNAPSHOT
 require 'date'
 
 module SwaggerClient
-  class PublicSymbolsResponseData
-    attr_accessor :symbols
-
+  class ForecastTimeRoute
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'symbols' => :'symbols'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'symbols' => :'Array<PublicSymbolsResponseDataSymbols>'
       }
     end
 
@@ -37,29 +33,18 @@ module SwaggerClient
 
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
-
-      if attributes.has_key?(:'symbols')
-        if (value = attributes[:'symbols']).is_a?(Array)
-          self.symbols = value
-        end
-      end
     end
 
     # Show invalid properties with the reasons. Usually used together with valid?
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @symbols.nil?
-        invalid_properties.push('invalid value for "symbols", symbols cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @symbols.nil?
       true
     end
 
@@ -67,8 +52,7 @@ module SwaggerClient
     # @param [Object] Object to be compared
     def ==(o)
       return true if self.equal?(o)
-      self.class == o.class &&
-          symbols == o.symbols
+      self.class == o.class
     end
 
     # @see the `==` method
@@ -80,7 +64,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [symbols].hash
+      [].hash
     end
 
     # Builds the object from hash
