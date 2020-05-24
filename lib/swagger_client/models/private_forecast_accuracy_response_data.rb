@@ -13,20 +13,20 @@ Swagger Codegen version: 2.4.15-SNAPSHOT
 require 'date'
 
 module SwaggerClient
-  class PublicPriceChangeResponseData
-    attr_accessor :price_change
+  class PrivateForecastAccuracyResponseData
+    attr_accessor :accuracy
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'price_change' => :'price_change'
+        :'accuracy' => :'accuracy'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'price_change' => :'Array<PublicPriceChangeResponseDataPriceChange>'
+        :'accuracy' => :'Float'
       }
     end
 
@@ -38,10 +38,8 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'price_change')
-        if (value = attributes[:'price_change']).is_a?(Array)
-          self.price_change = value
-        end
+      if attributes.has_key?(:'accuracy')
+        self.accuracy = attributes[:'accuracy']
       end
     end
 
@@ -49,8 +47,8 @@ module SwaggerClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @price_change.nil?
-        invalid_properties.push('invalid value for "price_change", price_change cannot be nil.')
+      if @accuracy.nil?
+        invalid_properties.push('invalid value for "accuracy", accuracy cannot be nil.')
       end
 
       invalid_properties
@@ -59,7 +57,7 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @price_change.nil?
+      return false if @accuracy.nil?
       true
     end
 
@@ -68,7 +66,7 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          price_change == o.price_change
+          accuracy == o.accuracy
     end
 
     # @see the `==` method
@@ -80,7 +78,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [price_change].hash
+      [accuracy].hash
     end
 
     # Builds the object from hash

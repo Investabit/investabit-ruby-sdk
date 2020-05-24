@@ -90,6 +90,7 @@ All URIs are relative to *https://api.cryptoweather.ai*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwaggerClient::PrivateApi* | [**v1_private_accuracy_symbol_interval_period_get**](docs/PrivateApi.md#v1_private_accuracy_symbol_interval_period_get) | **GET** /v1/private/accuracy/{symbol}/{interval}/{period} | Accuracy
+*SwaggerClient::PrivateApi* | [**v1_private_forecast_accuracy_symbol_interval_period_get**](docs/PrivateApi.md#v1_private_forecast_accuracy_symbol_interval_period_get) | **GET** /v1/private/forecast-accuracy/{symbol}/{interval}/{period} | Forecast Accuracy
 *SwaggerClient::PrivateApi* | [**v1_private_forecast_symbol_interval_get**](docs/PrivateApi.md#v1_private_forecast_symbol_interval_get) | **GET** /v1/private/forecast/{symbol}/{interval} | Forecast
 *SwaggerClient::PrivateApi* | [**v1_private_forecast_time_symbol_interval_period_get**](docs/PrivateApi.md#v1_private_forecast_time_symbol_interval_period_get) | **GET** /v1/private/forecast-time/{symbol}/{interval}/{period} | Forecast Time
 *SwaggerClient::PrivateApi* | [**v1_private_trend_symbol_get**](docs/PrivateApi.md#v1_private_trend_symbol_get) | **GET** /v1/private/trend/{symbol} | Trend
@@ -106,6 +107,7 @@ Class | Method | HTTP request | Description
 
  - [SwaggerClient::AccuracyRoute](docs/AccuracyRoute.md)
  - [SwaggerClient::DefaultResponse](docs/DefaultResponse.md)
+ - [SwaggerClient::ForecastAccuracyRoute](docs/ForecastAccuracyRoute.md)
  - [SwaggerClient::ForecastRoute](docs/ForecastRoute.md)
  - [SwaggerClient::ForecastTimeRoute](docs/ForecastTimeRoute.md)
  - [SwaggerClient::PriceChangeRoute](docs/PriceChangeRoute.md)
@@ -113,6 +115,8 @@ Class | Method | HTTP request | Description
  - [SwaggerClient::PriceHistoryRoute](docs/PriceHistoryRoute.md)
  - [SwaggerClient::PrivateAccuracyResponse](docs/PrivateAccuracyResponse.md)
  - [SwaggerClient::PrivateAccuracyResponseData](docs/PrivateAccuracyResponseData.md)
+ - [SwaggerClient::PrivateForecastAccuracyResponse](docs/PrivateForecastAccuracyResponse.md)
+ - [SwaggerClient::PrivateForecastAccuracyResponseData](docs/PrivateForecastAccuracyResponseData.md)
  - [SwaggerClient::PrivateForecastResponse](docs/PrivateForecastResponse.md)
  - [SwaggerClient::PrivateForecastResponseData](docs/PrivateForecastResponseData.md)
  - [SwaggerClient::PrivateForecastResponseDataForecast](docs/PrivateForecastResponseDataForecast.md)

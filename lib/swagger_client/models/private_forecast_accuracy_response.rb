@@ -13,20 +13,36 @@ Swagger Codegen version: 2.4.15-SNAPSHOT
 require 'date'
 
 module SwaggerClient
-  class PublicPriceChangeResponseData
-    attr_accessor :price_change
+  class PrivateForecastAccuracyResponse
+    attr_accessor :success
+
+    attr_accessor :code
+
+    attr_accessor :status
+
+    attr_accessor :data
+
+    attr_accessor :errors
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'price_change' => :'price_change'
+        :'success' => :'success',
+        :'code' => :'code',
+        :'status' => :'status',
+        :'data' => :'data',
+        :'errors' => :'errors'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'price_change' => :'Array<PublicPriceChangeResponseDataPriceChange>'
+        :'success' => :'BOOLEAN',
+        :'code' => :'Integer',
+        :'status' => :'String',
+        :'data' => :'PrivateForecastAccuracyResponseData',
+        :'errors' => :'Array<Object>'
       }
     end
 
@@ -38,9 +54,25 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
-      if attributes.has_key?(:'price_change')
-        if (value = attributes[:'price_change']).is_a?(Array)
-          self.price_change = value
+      if attributes.has_key?(:'success')
+        self.success = attributes[:'success']
+      end
+
+      if attributes.has_key?(:'code')
+        self.code = attributes[:'code']
+      end
+
+      if attributes.has_key?(:'status')
+        self.status = attributes[:'status']
+      end
+
+      if attributes.has_key?(:'data')
+        self.data = attributes[:'data']
+      end
+
+      if attributes.has_key?(:'errors')
+        if (value = attributes[:'errors']).is_a?(Array)
+          self.errors = value
         end
       end
     end
@@ -49,8 +81,20 @@ module SwaggerClient
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @price_change.nil?
-        invalid_properties.push('invalid value for "price_change", price_change cannot be nil.')
+      if @success.nil?
+        invalid_properties.push('invalid value for "success", success cannot be nil.')
+      end
+
+      if @code.nil?
+        invalid_properties.push('invalid value for "code", code cannot be nil.')
+      end
+
+      if @status.nil?
+        invalid_properties.push('invalid value for "status", status cannot be nil.')
+      end
+
+      if @data.nil?
+        invalid_properties.push('invalid value for "data", data cannot be nil.')
       end
 
       invalid_properties
@@ -59,7 +103,10 @@ module SwaggerClient
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @price_change.nil?
+      return false if @success.nil?
+      return false if @code.nil?
+      return false if @status.nil?
+      return false if @data.nil?
       true
     end
 
@@ -68,7 +115,11 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          price_change == o.price_change
+          success == o.success &&
+          code == o.code &&
+          status == o.status &&
+          data == o.data &&
+          errors == o.errors
     end
 
     # @see the `==` method
@@ -80,7 +131,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [price_change].hash
+      [success, code, status, data, errors].hash
     end
 
     # Builds the object from hash
